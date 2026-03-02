@@ -2,6 +2,12 @@
 #Space Complexity - Average Case - O(logn) - Due to recursive Call
 #Time Complexity - Worst Case - O(n^n) - (if data is sorted in ascending or descending order)
 #Space Complexity - Worst Case - O(n)
+'''Quick Sort performance depends on how balanced the recursion tree is.
+Balanced tree → fast
+Skewed tree → slow
+Pivot controls this balance.'''
+
+ 
 def quick_sort(arr,start,end):
     if start >= end:
         return
