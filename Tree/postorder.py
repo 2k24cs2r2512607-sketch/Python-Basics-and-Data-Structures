@@ -7,9 +7,10 @@ class Node:
     def preorder(self,root):
         if root is None:
             return self.ans
-        self.ans.append(root.data)
+        
         self.preorder(root.left)
-        self.preorder(root.right)    
+        self.preorder(root.right) 
+        self.ans.append(root.data)   
 root=Node(5)
 root.left=Node(10)
 root.left.right=Node(2)
