@@ -10,20 +10,18 @@ for edge in edges:
     y=edge[-1]
     adjList[x].append(y)
     adjList[y].append(x)
-stack=[]
+ 
 
 ans=[]
 visited=[False]*n
-stack.append(0)
-ans.append(0)
-visited[0]=True
-while len(stack)!=0:
-    top=stack.pop()
-    for i in adjList[top]:
-        if not visited[i]:
-            stack.append(i)
-            ans.append(i)
-            visited[i]=True
+ 
+ 
+def dfs(i,adjList,visited):
+    visited[i]=True
+    ans.append(i)
+    for x in adjList[i]:
+        if not visited[x]:
+            dfs(x,adjList,visited)
+
+dfs(0,adjList,visited)
 print(ans)
-
-
