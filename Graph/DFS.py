@@ -18,8 +18,8 @@ stack.append(0)
 ans.append(0)
 visited[0]=True
 while len(stack)!=0:
-    front=stack.pop()
-    for i in adjList[front]:
+    top=stack.pop()
+    for i in adjList[top]:
         if not visited[i]:
             stack.append(i)
             ans.append(i)
